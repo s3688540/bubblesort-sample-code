@@ -1,0 +1,38 @@
+package bubbleSort;
+
+import java.util.Arrays;
+
+public class BubbleSort {
+	
+
+	public static void main(String[] args) {
+		int a[] = {70,61,72,83,38};
+		int b[] = {7,2,76,4,99};
+		int c[] = {28,9,13,78,19};
+		int d[] = {68,84,41,62,18};
+        displayResult(a);
+        displayResult(b);
+        displayResult(c);
+        displayResult(d);
+	}
+	
+	public static int[] bubble(int[] array) {
+		int temp;
+		for(int i=0;i<array.length-1;i++) {
+			
+			for(int j=0;j<array.length-i-1;j++) {
+				if(array[j]>array[j+1]) {
+						temp=array[j];
+				        array[j]=array[j+1];
+				        array[j+1]=temp;
+				}
+			}
+		}
+		return array;
+	}
+	
+	public static void displayResult(int[] a) {
+		System.out.println(Arrays.toString(bubble(a)));
+	}
+
+}
